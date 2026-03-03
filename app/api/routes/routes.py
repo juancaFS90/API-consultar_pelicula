@@ -7,10 +7,10 @@ from api.schemas.schemas import PeliculaSch, PeliculaUpdate
 from bson import ObjectId
 from marshmallow import ValidationError
 
-routes = Blueprint("routes", __name__)
+routes=Blueprint("routes", __name__)
 
-pelicula_schema = PeliculaSch()
-pelicula_update = PeliculaUpdate()
+pelicula_schema=PeliculaSch()
+pelicula_update=PeliculaUpdate()
 
 
 @routes.route("/createMovie", methods=["POST"])
@@ -18,8 +18,8 @@ def create_movie():
 
     try:
         data=pelicula_schema.load(request.get_json())
-    except ValidationError  as err:
-        return jsonify(err.messages),400
+    except ValidationError as err:
+        return jsonify(err.messages), 400
 
     result=collection.insert_one(data)
 
@@ -30,7 +30,7 @@ def create_movie():
 
 @routes.route("/Obtain_all_movie", methods=["GET"])
 def obtain_all_movie():
-    peliculas = []
+    peliculas=[]
 
     for pelicula in collection.find():
         pelicula["_id"]=str(pelicula["_id"])
