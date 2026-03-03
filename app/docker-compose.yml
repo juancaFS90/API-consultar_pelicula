@@ -1,0 +1,33 @@
+services:
+  api:
+    build: .
+    container_name: flask_api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - rabbitmq
+      - mongodb
+
+  worker:
+    build: .
+    container_name: worker
+    command: python worker/worker.py
+    depends_on:
+      - rabbitmq
+      - mongodb
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_server
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongoServer
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
