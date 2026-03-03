@@ -15,7 +15,7 @@ La aplicación está contenerizada con Docker para facilitar su despliegue y eje
 
 ---
 
-## ⚙ Instalación Local (Sin Docker)
+## ⚙ Instalación Local
 
 ### 1️⃣ Clonar el repositorio
 
@@ -33,9 +33,6 @@ venv\Scripts\activate
 ```
 
 ---
-
-## ✅ 2️⃣ Instalación de dependencias
-
 ## 📦 Instalación de Dependencias
 
 Una vez activado el entorno virtual, instalar las dependencias del proyecto:
@@ -44,9 +41,6 @@ Una vez activado el entorno virtual, instalar las dependencias del proyecto:
 pip install -r requirements.txt
 ```
 ---
-
-## ✅ 3️⃣ Ejecutar con Docker Compose
-
 ## 🐳 Ejecutar con Docker Compose
 
 Si el proyecto incluye un archivo `docker-compose.yml`, ejecutar:
@@ -55,8 +49,6 @@ Si el proyecto incluye un archivo `docker-compose.yml`, ejecutar:
 docker compose up --build
 ```
 ---
-
-## ✅ 4️⃣ Endpoints
 ## 📌 Endpoints
 
 ### 🔎 Obtener película por nombre
