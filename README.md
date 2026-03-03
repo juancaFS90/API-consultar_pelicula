@@ -57,7 +57,7 @@ GET /pelicula/{nombre}
 
 Ejemplo:
 
-GET http://localhost:8000/pelicula/inception
+GET http://localhost:8000/Obtain_all_movie
 
 Ejemplo de respuesta:
 
@@ -66,7 +66,5 @@ Ejemplo de respuesta:
   "titulo": "Inception",
   "año": "2010",
   "director": "Christopher Nolan",
-  "genero": "Sci-Fi",
-  "rating": "8.8"
 }
 ```
