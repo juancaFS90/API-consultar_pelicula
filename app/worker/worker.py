@@ -24,15 +24,15 @@ def connect_to_rabbit():
 
 def callback(ch, method, properties, body):
 
-    print("Mensaje recibido:",body)
+    print("Mensaje recibido:", body)
     data = json.loads(body)
     process_task(data)
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
 
 # 👇 USAMOS la conexión con retry
-connection = connect_to_rabbit()
-channel = connection.channel()
+connection=connect_to_rabbit()
+channel=connection.channel()
 
 channel.queue_declare(queue="peliculas")
 
