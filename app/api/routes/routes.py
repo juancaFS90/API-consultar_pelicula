@@ -79,7 +79,7 @@ def updateMovie(id):
     except Exception:
         return jsonify({"error": "ID invalido"}), 400
     
-@routes.route("/deleteMovie/<id>", methods =["DELETE"])
+@routes.route("/deleteMovie/<id>", methods=["DELETE"])
 def deleteMovie(id):
     try:
 
