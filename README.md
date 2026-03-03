@@ -36,7 +36,6 @@ venv\Scripts\activate
 
 ## ✅ 2️⃣ Instalación de dependencias
 
-```markdown
 ## 📦 Instalación de Dependencias
 
 Una vez activado el entorno virtual, instalar las dependencias del proyecto:
@@ -44,12 +43,10 @@ Una vez activado el entorno virtual, instalar las dependencias del proyecto:
 ```bash
 pip install -r requirements.txt
 ```
-
 ---
 
 ## ✅ 3️⃣ Ejecutar con Docker Compose
 
-```markdown
 ## 🐳 Ejecutar con Docker Compose
 
 Si el proyecto incluye un archivo `docker-compose.yml`, ejecutar:
@@ -57,12 +54,9 @@ Si el proyecto incluye un archivo `docker-compose.yml`, ejecutar:
 ```bash
 docker compose up --build
 ```
-
 ---
 
 ## ✅ 4️⃣ Endpoints
-
-```markdown
 ## 📌 Endpoints
 
 ### 🔎 Obtener película por nombre
